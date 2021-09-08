@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/merchant.rb": {
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/item.rb": {
         "lines": [
           1,
           1,
@@ -15,87 +15,18 @@
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/customer.rb": {
-        "lines": [
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/invoice_item.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/invoice.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/item.rb": {
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/merchant.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/transaction.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/controllers/merchants_controller.rb": {
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/helpers/application_helper.rb": {
         "lines": [
           1,
           1,
-          4,
           0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          4,
-          null,
-          4,
-          4,
-          80,
-          80,
-          null,
-          4,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/controllers/items_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
           0,
           0,
           null,
@@ -106,50 +37,12 @@
           null,
           0,
           null,
-          0,
-          0,
-          0,
           null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
           0,
           0,
           null,
           0,
-          null,
           0,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          1,
-          null,
-          1,
           0,
           null,
           null
@@ -165,7 +58,48 @@
         "branches": {
         }
       },
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/invoice.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/customer.rb": {
+        "lines": [
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/invoice_item.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/models/transaction.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/controllers/application_controller.rb": {
         "lines": [
           0,
           0
@@ -175,6 +109,31 @@
       },
       "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/controllers/customers_controller.rb": {
         "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/controllers/merchants_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0
         ],
@@ -192,6 +151,58 @@
           0,
           0,
           0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/alexmac/Documents/turing/mod_3/projects/rails_engine/app/controllers/items_controller.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
           0,
           0,
           0,
@@ -221,6 +232,6 @@
         }
       }
     },
-    "timestamp": 1631119421
+    "timestamp": 1631128953
   }
 }

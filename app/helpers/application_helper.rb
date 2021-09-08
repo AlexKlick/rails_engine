@@ -1,5 +1,5 @@
-module PaginationHelper
-  def paginate(params)
+module ApplicationHelper
+  def self.paginate(params)
     if params[:page] || params[:per_page]
       if params[:page].to_i > 0 
         params[:page] = params[:page].to_i
