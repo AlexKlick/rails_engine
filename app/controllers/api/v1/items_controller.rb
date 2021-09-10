@@ -3,7 +3,6 @@ module Api
     class ItemsController < ApplicationController
       def index
         bounds = ApplicationHelper.paginate(params)
-        puts bounds
         items = Item.first(bounds[1])[bounds[0]..bounds[1]]
         hash = {data: []}
         if items
@@ -29,12 +28,27 @@ module Api
       end
       def create
         item = Item.new(item_params)
+        binding.pry
         if item.save
           hash = {}
           item = {id: item.id.to_s, type: 'item', attributes: {name: item.name, description: item.description, unit_price: item.unit_price, merchant_id: item.merchant_id}}
           hash[:data] = item
           render json: hash, status: :created 
         end
+      end
+      def update
+        item = Item.find(params[:id])
+        hash = {}
+        status = 200
+        if item_params[:merchant_id] != nil && item.merchant_id != item_params[:merchant_id]
+          hash = {error: "What were you thinking? You can't change the merchant of an item! That's like saying Google now makes the macbook!?!"}
+          status = 400
+        else
+          item.update(item_params)
+          item = {id: item.id.to_s, type: 'item', attributes: {name: item.name, description: item.description, unit_price: item.unit_price, merchant_id: item.merchant_id}}
+          hash[:data] = item
+        end
+        render json: hash, status: status
       end
       def delete
         Item.destroy(item_params[:id])

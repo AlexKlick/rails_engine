@@ -3,11 +3,15 @@ module Api
     class MerchantsController < ApplicationController
       def index
         bounds = ApplicationHelper.paginate(params)
-        @merchants = Merchant.first(bounds[1])[bounds[0]..bounds[1]]
+        merchants = Merchant.first(bounds[1])[bounds[0]..bounds[1]]
         hash = {data: []}
-        @merchants.each_with_index do |m, i|
-          merchant = {id: m.id, type: 'merchant', attributes: {name: m.name}}
-          hash[:data] << merchant
+
+        if merchants != nil
+          merchants.each_with_index do |m, i|
+            merchant = {id: m.id, type: 'merchant', attributes: {name: m.name}}
+            hash[:data] << merchant
+          end
+        else
         end
         render json: hash
       end
@@ -19,13 +23,5 @@ module Api
         render json: hash
       end
     end
-    module Merchants   
-      class FindsController < ApplicationController
-        def index
-          binding.pry
-        end
-      end   
-    end
-
   end
 end

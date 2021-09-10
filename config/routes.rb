@@ -1,21 +1,27 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
   namespace 'api' do
     namespace 'v1' do
-      namespace 'revenue' do
-        resource :merchants
-      end
+
       namespace 'merchants' do
-        resource :find
+        resource :most_items, only: :show
+        resource :find, only: :show
       end
       namespace 'items' do
-        resource :find_all
+        resource :find_all, only: :show
       end
-      resources :items, controller: 'items'
+      namespace 'revenue' do
+        resources :merchants, only: [:index, :show]
+        resources :items, only: :index
+      end
+
+      resources :items, controller: 'items' do
+        get '/merchant', to: 'items/merchants#show'
+      end
       resources :merchants, only: [:index, :show] do 
-        resources :items
+        resources :items, only: :index, controller: 'merchants/items'
       end
+
     end
   end
- 
 end
