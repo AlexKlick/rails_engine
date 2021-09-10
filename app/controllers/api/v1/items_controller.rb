@@ -28,7 +28,6 @@ module Api
       end
       def create
         item = Item.new(item_params)
-        binding.pry
         if item.save
           hash = {}
           item = {id: item.id.to_s, type: 'item', attributes: {name: item.name, description: item.description, unit_price: item.unit_price, merchant_id: item.merchant_id}}
@@ -50,9 +49,12 @@ module Api
         end
         render json: hash, status: status
       end
-      def delete
-        Item.destroy(item_params[:id])
-        render status: :deleted
+      def destroy
+        item = Item.destroy(params[:id])
+        hash = {}
+        item = {id: item.id.to_s, type: 'item', attributes: {name: item.name, description: item.description, unit_price: item.unit_price, merchant_id: item.merchant_id}}
+        hash[:data] = item
+        render json: hash, status: 202
       end
       private
 

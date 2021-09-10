@@ -1,9 +1,6 @@
 class Merchant < ApplicationRecord
   has_many :items, dependent: :destroy
-  scope :success_and_shipped, -> {
-    self.where("transactions.result = ?", "success")
-    .where("invoices.status = ?", "shipped")
-  }
+
   def self.get_merchants_revenue_desc(params)
     joins(items: [{invoice_items: {invoice: :transactions }}])
       .where("transactions.result = ?", "success")
